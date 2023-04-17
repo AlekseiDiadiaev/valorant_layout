@@ -1,0 +1,42 @@
+.hero {
+    width: 220px;
+    height: 495px;
+    position: relative;
+    background:linear-gradient(135deg, transparent 7px, $main-black 0);
+    &__img {
+        // width: 100%;
+        object-fit: fill ;
+    }
+    &__title {
+        position: absolute;
+        width: 100%;
+        top: 96px;
+        left: -135px;
+        font-family: 'Druk Wide Medium', sans-serif;
+        font-weight: 500;
+        font-size: 72px;
+        letter-spacing: 0.1em;
+        transform: rotate(90deg);
+        color: transparent;
+        -webkit-text-stroke: 1px white;
+    }
+    &__country {
+        position: absolute;
+        width: 250%;
+        top: 290px;
+        left: -249px;
+        font-family: 'Druk Wide Medium', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 16px;
+        letter-spacing: 0.1em;
+        color: $main-red;
+        transform: rotate(90deg);
+    }
+    &_active {
+        background:linear-gradient(135deg, transparent 7px, $main-light-grey 0);
+        & > .hero__title{
+            -webkit-text-stroke: 1px black;
+        }
+    }
+}

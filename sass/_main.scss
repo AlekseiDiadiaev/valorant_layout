@@ -3,21 +3,36 @@
     background-color: $main-red;
     overflow: hidden;
     position: relative;
+    padding-top: 60px;
+    padding-left: 250px;
+    overflow: visible;
+
     & img {
+        top: 0;
+        left: 0;
+        position: absolute;
         height: 100%;
     }
     &__agents {
+        width: 670px;
+        overflow: hidden;
         position: absolute;
-        left: -400px;
-        top: 510px;
+        padding: 4px;
+        left: -253px;
+        top: 312px;
         font-family: 'Druk Wide Medium';
         font-size: 150px;
-        line-height: 102px;
         text-align: center;
         letter-spacing: 0.1em;
         color: transparent;
         transform: rotate(90deg);
         -webkit-text-stroke: 1px #fff;
+    }
+    &__wrapper {
+        width: 102%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
