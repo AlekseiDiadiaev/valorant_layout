@@ -1,0 +1,23 @@
+.main {
+    height: calc(100% - 128px);
+    background-color: $main-red;
+    overflow: hidden;
+    position: relative;
+    & img {
+        height: 100%;
+    }
+    &__agents {
+        position: absolute;
+        left: -400px;
+        top: 510px;
+        font-family: 'Druk Wide Medium';
+        font-size: 150px;
+        line-height: 102px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        color: transparent;
+        transform: rotate(90deg);
+        -webkit-text-stroke: 1px #fff;
+    }
+}
+

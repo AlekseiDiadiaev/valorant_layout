@@ -1,0 +1,80 @@
+.container {
+    margin: 0 auto;
+    max-width: 1550px;
+    height: 100%;
+    background-color: $main-black;
+    position: relative;  
+    padding-top: 80px;
+}
+
+.circles {
+    z-index: -2;
+    &__red-big{
+        position: absolute;
+        width: 1100px;
+        height: 1100px;
+        left: -165px;
+        top: -550px;
+        background: $main-red;
+        border-radius: 50%;
+        z-index: 0;
+    }
+    &__grey-big{
+        position: absolute;
+        width: 721.5px;
+        height: 721.5px;
+        bottom: -140px;
+        right: -70px;
+        border-radius: 50%;
+        background: #292C31;
+    }
+    &__white-bot{
+        position: absolute;
+        width: 235px;
+        height: 235px;
+        left: 80px;
+        bottom: -115px;
+        border-radius: 50%;
+        background: $main-light-grey;
+    }
+    &__grey-left{
+        position: absolute;
+        width: 31.5px;
+        height: 31.5px;
+        border-radius: 50%;
+        left: 56px;
+        bottom: 120px;
+        border-radius: 50%;
+        background: #505155;
+    }
+    &__grey-right{
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        right: 27px;
+        top: 237px;
+        border-radius: 50%;
+        background: #505155;
+    }
+    &__white-top{
+        position: absolute;
+        width: 134px;
+        height: 134.5px;
+        right: 52px;
+        top: 91px;
+        border-radius: 50%;
+        background: $main-light-grey;
+    }
+    &__red-small{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 100px;
+        top: 37px;
+        border-radius: 50%;
+        background: $main-red;
+    }
+    
+
+    
+}

@@ -1,0 +1,13 @@
+.logo {
+    top: 20px;
+    left: 40px;
+    position: absolute;
+    z-index: 1;
+    & span {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 55px;
+        color: #F8F8F8;
+    }
+}

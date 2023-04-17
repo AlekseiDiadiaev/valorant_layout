@@ -1,0 +1,17 @@
+.user {
+    &__ico{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+    &__name{
+        padding: 5px;
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 14px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}

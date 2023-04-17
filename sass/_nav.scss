@@ -1,0 +1,22 @@
+.nav {
+    &__btn {
+        margin-left: 25px;
+        padding: 5px;
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 9px;
+        line-height: 9px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: inherit;
+        transition: all 0.2s;
+        @media (hover: hover) {
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+}
