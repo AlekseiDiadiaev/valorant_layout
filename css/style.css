@@ -110,6 +110,7 @@ body {
   border-radius: 16px;
   margin: 0 auto;
   position: relative;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -147,6 +148,9 @@ body {
   }
 }
 
+.user {
+  cursor: pointer;
+}
 .user__ico {
   width: 25px;
   height: 25px;
@@ -163,10 +167,152 @@ body {
   color: #FFFFFF;
 }
 
-.footer {
-  height: 66px;
-  border-radius: 0px 0px 16px 16px;
-  background-color: #EFEFEF;
+.skills {
+  position: absolute;
+  top: -100px;
+  left: -65px;
+  width: 100%;
+  height: 124px;
+  display: flex;
+  justify-content: space-between;
+}
+.skills__item {
+  cursor: default;
+  padding: 25px 30px 15px 30px;
+  width: 362px;
+  height: 124px;
+  background: linear-gradient(135deg, transparent 7px, #1F2326 0);
+  position: relative;
+  transition: 0.5s all;
+  overflow: hidden;
+}
+.skills__item:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: linear-gradient(135deg, transparent 7px, #EFEFEF 0);
+}
+@media (hover: hover) {
+  .skills__item:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+  }
+  .skills__item:hover .skills__ico {
+    bottom: 0px;
+  }
+}
+.skills__title {
+  position: relative;
+  z-index: 5;
+  font-family: "Druk Wide Medium";
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 26px;
+  color: #C4C4C4;
+}
+.skills__subtitle {
+  position: relative;
+  z-index: 5;
+  font-family: "Druk Wide Medium";
+  font-weight: 500;
+  font-size: 24px;
+}
+.skills__descr {
+  width: 160px;
+  position: relative;
+  z-index: 5;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 10px;
+  letter-spacing: 0.1em;
+  color: #1F2326;
+}
+.skills__ico {
+  transition: 0.5s all;
+  position: absolute;
+  z-index: 5;
+  width: 95px;
+  height: 91px;
+  left: 208px;
+  bottom: -110px;
+  background: #FF4656;
+}
+.skills__ico > img {
+  position: relative;
+  right: -35px;
+  top: -19px;
+  width: 85px;
+  object-fit: contain;
+}
+.skills__next-btn {
+  cursor: pointer;
+  width: 110px;
+  height: 124px;
+  background: linear-gradient(135deg, transparent 7px, #1F2326 0);
+  position: relative;
+  transition: 0.5s all;
+  overflow: hidden;
+}
+.skills__next-btn:after {
+  content: "";
+  position: absolute;
+  top: 47%;
+  left: 52%;
+  transform: scaleY(0.6) rotate(-45deg) translateX(-50%) translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, transparent 7px, black 0);
+}
+.skills__next-btn:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: linear-gradient(135deg, transparent 7px, #EFEFEF 0);
+}
+@media (hover: hover) {
+  .skills__next-btn:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: translate(-2px, -2px);
+  }
+  .skills__next-btn:hover .skills__next-btn-left {
+    left: 30px;
+  }
+  .skills__next-btn:hover .skills__next-btn-right {
+    right: 30px;
+  }
+}
+.skills__next-btn-left {
+  transition: 0.5s all;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  width: 50%;
+  height: 50px;
+  background: #FF4656;
+  background: linear-gradient(135deg, transparent 10px, #FF4656 0) left, linear-gradient(-45deg, transparent 10px, #FF4656 0) right;
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-48%);
+}
+.skills__next-btn-right {
+  transition: 0.5s all;
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  width: 50%;
+  height: 50px;
+  background: #FF4656;
+  background: linear-gradient(135deg, transparent 10px, #FF4656 0) left, linear-gradient(-45deg, transparent 10px, #FF4656 0) right;
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-48%);
 }
 
 .main {
@@ -178,13 +324,14 @@ body {
   padding-left: 250px;
   overflow: visible;
 }
-.main img {
+.main > img {
   top: 0;
   left: 0;
   position: absolute;
   height: 100%;
 }
 .main__agents {
+  cursor: default;
   width: 670px;
   overflow: hidden;
   position: absolute;
@@ -211,11 +358,43 @@ body {
   height: 495px;
   position: relative;
   background: linear-gradient(135deg, transparent 7px, #1F2326 0);
+  cursor: pointer;
+}
+@media (hover: hover) {
+  .hero:hover .hero__img {
+    scale: 1.05;
+  }
+  .hero:hover .hero__title {
+    color: #EFEFEF;
+  }
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  background: linear-gradient(135deg, transparent 7px, #1F2326 0);
+}
+.hero__wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .hero__img {
-  object-fit: fill;
+  transition: 0.5s all;
+  position: relative;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  max-width: calc(100% - 2px);
+  max-height: calc(100% - 2px);
+  object-fit: contain;
 }
 .hero__title {
+  transition: 0.5s all;
   position: absolute;
   width: 100%;
   top: 96px;
@@ -241,11 +420,53 @@ body {
   color: #FF4656;
   transform: rotate(90deg);
 }
+.hero__skills {
+  position: absolute;
+  width: 220px;
+  height: 55px;
+  left: 18px;
+  bottom: -18px;
+  background: #1F2326;
+  border: 1px solid #F8F8F8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 18px;
+}
+.hero__skills svg {
+  position: static;
+  display: block;
+  width: 23%;
+  object-fit: none;
+}
+.hero__skills > svg > path {
+  fill: #ffffff;
+}
 .hero_active {
-  background: linear-gradient(135deg, transparent 7px, #EFEFEF 0);
+  background: linear-gradient(135deg, transparent 7px, #1F2326 0);
 }
 .hero_active > .hero__title {
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1.5px black;
+}
+.hero_active:before {
+  background: linear-gradient(135deg, transparent 7px, #EFEFEF 0);
+}
+.hero_active .hero__skills > svg > path {
+  fill: #000000;
+}
+.hero_active .hero__skills {
+  border-color: black;
+  background: #EFEFEF;
+}
+.hero_active:hover .hero__title {
+  color: #1F2326;
+}
+
+.footer {
+  height: 66px;
+  border-radius: 0px 0px 16px 16px;
+  background-color: #EFEFEF;
+  position: relative;
 }
 
 /*# sourceMappingURL=style.css.map */

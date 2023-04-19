@@ -7,13 +7,14 @@
     padding-left: 250px;
     overflow: visible;
 
-    & img {
+    & > img {
         top: 0;
         left: 0;
         position: absolute;
         height: 100%;
     }
     &__agents {
+        cursor: default;
         width: 670px;
         overflow: hidden;
         position: absolute;

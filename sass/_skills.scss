@@ -1,0 +1,147 @@
+.skills {
+    position: absolute;
+    top: -100px;
+    left: -65px;
+    width: 100%;
+    height: 124px;
+    display: flex;
+    justify-content: space-between;
+    &__item{
+        cursor:default;
+        padding: 25px 30px 15px 30px;
+        width: 362px;
+        height: 124px;
+        background:linear-gradient(135deg, transparent 7px, $main-black 0);
+        position: relative;
+        transition: 0.5s all;
+        overflow: hidden;
+        &:before{
+            content:'';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            background:linear-gradient(135deg, transparent 7px, $main-light-grey 0);
+        }
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                transform: translate(-2px, -2px);
+                .skills__ico{
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+    &__title{
+        position: relative;
+        z-index: 5;
+        font-family: 'Druk Wide Medium';
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 26px;
+        color: #C4C4C4;
+    }
+    &__subtitle{
+        position: relative;
+        z-index: 5;
+        font-family: 'Druk Wide Medium';
+        font-weight: 500;
+        font-size: 24px;
+    }
+    &__descr{
+        width: 160px;
+        position: relative;
+        z-index: 5;
+        font-family: 'Montserrat';
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 10px;
+        letter-spacing: 0.1em;
+        color: #1F2326;
+    }
+    &__ico{
+        transition: 0.5s all;
+        position: absolute;
+        z-index: 5;
+        width: 95px;
+        height: 91px;
+        left: 208px;
+        bottom: -110px;
+        background: #FF4656;
+        & > img {
+            position: relative;
+            right: -35px;
+            top: -19px;
+            width: 85px;
+            object-fit: contain;
+        }
+    }
+    &__next-btn{
+        cursor: pointer;
+        width: 110px;
+        height: 124px;
+        background:linear-gradient(135deg, transparent 7px, $main-black 0);
+        position: relative;
+        transition: 0.5s all;
+        overflow: hidden;
+        &:after{
+            content:'';
+            position: absolute;
+            top: 47%;
+            left: 52%;
+            transform: scaleY(0.6) rotate(-45deg) translateX(-50%) translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background:linear-gradient(135deg, transparent 7px, black 0);
+        }
+        &:before{
+            content:'';
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            width: calc(100% - 2px);
+            height: calc(100% - 2px);
+            background:linear-gradient(135deg, transparent 7px, $main-light-grey 0);
+        }
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                transform: translate(-2px, -2px);
+                .skills__next-btn-left{
+                    left: 30px;  
+                }
+                .skills__next-btn-right{
+                    right: 30px;  
+                }
+            }
+        }
+    }
+    &__next-btn-left{
+        transition: 0.5s all;
+        position: absolute;
+        top: 50%;
+        left: -50%;
+        width: 50%;
+        height: 50px;
+        background: $main-red;
+        background:linear-gradient(135deg, transparent 10px, $main-red 0) left, linear-gradient(-45deg, transparent 10px, $main-red 0) right;
+        background-size: 55% 100%;
+        background-repeat: no-repeat;
+        transform: translateY(-48%)
+    }
+    &__next-btn-right{
+        transition: 0.5s all;
+        position: absolute;
+        top: 50%;
+        right: -50%;
+        width: 50%;
+        height: 50px;
+        background: $main-red;
+        background:linear-gradient(135deg, transparent 10px, $main-red 0) left, linear-gradient(-45deg, transparent 10px, $main-red 0) right;
+        background-size: 55% 100%;
+        background-repeat: no-repeat;
+        transform: translateY(-48%)
+    }
+}
