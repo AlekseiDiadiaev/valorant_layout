@@ -6,6 +6,14 @@ html {
 }
 
 body {
-     background-color: $main-black;
-     overflow: hidden;
+    height: 950px; 
+    background-color: $main-black;
+
+}
+.container {
+    margin: 0 auto;
+    max-width: 1550px;
+    height: 950px;
+    position: relative;  
+    padding: 60px 70px;
 }

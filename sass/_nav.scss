@@ -5,7 +5,7 @@
         display: inline-block;
         font-family: 'Montserrat';
         font-weight: 700;
-        font-size: 9px;
+        font-size: 10px;
         line-height: 9px;
         text-align: center;
         color: #FFFFFF;
@@ -14,7 +14,7 @@
         @media (hover: hover) {
             &:hover {
                 cursor: pointer;
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
     }

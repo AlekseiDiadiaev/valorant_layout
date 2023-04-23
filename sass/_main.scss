@@ -11,7 +11,8 @@
         top: 0;
         left: 0;
         position: absolute;
-        height: 100%;
+        width: 100%;
+        object-fit: contain;
     }
     &__agents {
         cursor: default;
@@ -34,6 +35,13 @@
         height: 100%;
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (max-width: 1399.98px) {
+        &__agents {
+            display: none
+        }
+        padding-left: 70px;
     }
 }
 

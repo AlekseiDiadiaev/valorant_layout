@@ -1,0 +1,21 @@
+.moving-elem {
+    &__item {
+        position: absolute;
+        transition: all 1s ease-out;
+        background: #1F2326;
+        opacity: 0.5;
+        z-index: 3px;
+    }
+    &__quad {
+        width: 20px;
+        height: 20px;
+    }
+    &__line-short {
+        width: 40px;
+        height: 4px;
+    }
+    &__line-short {    
+        width: 40px;
+        height: 4px;
+    }
+}

@@ -1,14 +1,19 @@
-.container {
-    margin: 0 auto;
-    max-width: 1550px;
-    height: 100%;
-    background-color: $main-black;
-    position: relative;  
-    padding-top: 80px;
+
+.wrapper {
+    position: absolute;
+    z-index: -20;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .circles {
-    z-index: -2;
+    margin: 0 auto;
+    max-width: 1550px;
+    height: 950px;
+    position: relative;
+    z-index: -5;
     &__red-big{
         position: absolute;
         width: 1100px;
@@ -23,7 +28,7 @@
         position: absolute;
         width: 721.5px;
         height: 721.5px;
-        bottom: -140px;
+        bottom: -500px;
         right: -70px;
         border-radius: 50%;
         background: #292C31;
@@ -73,8 +78,5 @@
         top: 37px;
         border-radius: 50%;
         background: $main-red;
-    }
-    
-
-    
+    }  
 }

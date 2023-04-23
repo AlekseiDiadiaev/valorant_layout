@@ -8,21 +8,33 @@ html {
 }
 
 body {
+  height: 950px;
   background-color: #1F2326;
-  overflow: hidden;
 }
 
 .container {
   margin: 0 auto;
   max-width: 1550px;
-  height: 100%;
-  background-color: #1F2326;
+  height: 950px;
   position: relative;
-  padding-top: 80px;
+  padding: 60px 70px;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: -20;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .circles {
-  z-index: -2;
+  margin: 0 auto;
+  max-width: 1550px;
+  height: 950px;
+  position: relative;
+  z-index: -5;
 }
 .circles__red-big {
   position: absolute;
@@ -38,7 +50,7 @@ body {
   position: absolute;
   width: 721.5px;
   height: 721.5px;
-  bottom: -140px;
+  bottom: -500px;
   right: -70px;
   border-radius: 50%;
   background: #292C31;
@@ -91,7 +103,7 @@ body {
 }
 
 .logo {
-  top: 20px;
+  top: 7px;
   left: 40px;
   position: absolute;
   z-index: 1;
@@ -105,7 +117,7 @@ body {
 }
 
 .content {
-  width: 1330px;
+  max-width: 1330px;
   height: 860px;
   border-radius: 16px;
   margin: 0 auto;
@@ -134,7 +146,7 @@ body {
   display: inline-block;
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 9px;
+  font-size: 10px;
   line-height: 9px;
   text-align: center;
   color: #FFFFFF;
@@ -144,7 +156,7 @@ body {
 @media (hover: hover) {
   .nav__btn:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 }
 
@@ -165,16 +177,24 @@ body {
   line-height: 14px;
   text-align: center;
   color: #FFFFFF;
+  transition: all 0.1s;
+}
+@media (hover: hover) {
+  .user__name:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
 }
 
 .skills {
   position: absolute;
-  top: -100px;
+  top: -112px;
   left: -65px;
   width: 100%;
-  height: 124px;
+  height: 150px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .skills__item {
   cursor: default;
@@ -222,6 +242,7 @@ body {
 }
 .skills__descr {
   width: 160px;
+  height: 31px;
   position: relative;
   z-index: 5;
   font-family: "Montserrat";
@@ -230,6 +251,8 @@ body {
   line-height: 10px;
   letter-spacing: 0.1em;
   color: #1F2326;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .skills__ico {
   transition: 0.5s all;
@@ -238,15 +261,32 @@ body {
   width: 95px;
   height: 91px;
   left: 208px;
-  bottom: -110px;
+  bottom: -80px;
   background: #FF4656;
 }
 .skills__ico > img {
   position: relative;
   right: -35px;
-  top: -19px;
+  top: 10px;
   width: 85px;
+  max-height: 110px;
   object-fit: contain;
+  transform: translateY(-50%);
+}
+.skills__wrapper {
+  padding: 3px;
+  overflow: hidden;
+  width: 1150px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.5s;
+}
+.skills__wrapper > div {
+  position: relative;
+  transition: all 0.5s;
 }
 .skills__next-btn {
   cursor: pointer;
@@ -314,6 +354,18 @@ body {
   background-repeat: no-repeat;
   transform: translateY(-48%);
 }
+@media (max-width: 1399.98px) {
+  .skills {
+    left: 20px;
+  }
+  .skills__wrapper {
+    width: 800px;
+    gap: 50px;
+  }
+  .skills__next-btn {
+    right: 100px;
+  }
+}
 
 .main {
   height: calc(100% - 128px);
@@ -328,7 +380,8 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 .main__agents {
   cursor: default;
@@ -352,6 +405,14 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1399.98px) {
+  .main {
+    padding-left: 70px;
+  }
+  .main__agents {
+    display: none;
+  }
+}
 
 .hero {
   width: 220px;
@@ -366,6 +427,10 @@ body {
   }
   .hero:hover .hero__title {
     color: #EFEFEF;
+  }
+  .hero:hover .hero__skills {
+    transform: translate(3px, 3px);
+    box-shadow: -3px -3px 5px rgb(236, 200, 200);
   }
 }
 .hero:before {
@@ -421,6 +486,7 @@ body {
   transform: rotate(90deg);
 }
 .hero__skills {
+  transition: 0.5s all;
   position: absolute;
   width: 220px;
   height: 55px;
@@ -467,6 +533,26 @@ body {
   border-radius: 0px 0px 16px 16px;
   background-color: #EFEFEF;
   position: relative;
+}
+
+.moving-elem__item {
+  position: absolute;
+  transition: all 1s ease-out;
+  background: #1F2326;
+  opacity: 0.5;
+  z-index: 3px;
+}
+.moving-elem__quad {
+  width: 20px;
+  height: 20px;
+}
+.moving-elem__line-short {
+  width: 40px;
+  height: 4px;
+}
+.moving-elem__line-short {
+  width: 40px;
+  height: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,5 +14,13 @@
         line-height: 14px;
         text-align: center;
         color: #FFFFFF;
+        transition: all 0.1s;
+        @media (hover: hover) {
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
     }
+   
 }
